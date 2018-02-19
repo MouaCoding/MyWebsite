@@ -1,5 +1,4 @@
-﻿document.write("Hello, World!")
-
+﻿
 function add(x, y)
 {
     return x + y;
@@ -31,4 +30,6 @@ function githubConfirm() {
         return false;
     }
 }
+
+
 
