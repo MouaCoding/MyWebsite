@@ -1,4 +1,6 @@
 ﻿
+
+
 *{
   box-sizing: border-box;
 }
@@ -90,12 +92,12 @@ ul#horizontalImages li:hover{
 }
 
 .project-box {
-    background: linear-gradient(white, black);
-    border: 5px solid black;
+    background: radial-gradient( transparent 50%, white 100%); /*url('../img/images.jpg') no-repeat center;*/
     border-radius: 10px;
     padding: 20px 50px 200px 50px;
     margin: 100px 0px;
     overflow: auto;
+    box-shadow: 10px 15px 10px black;
 }
 
 .projects {
@@ -161,5 +163,22 @@ a:active {
 :focus {
     color: black;
     background-color: orange;
+}
+
+
+/*Media Queries ---------------------*/
+@media all (max-width: 960px) {
+    body{
+        background: royalblue;
+    }
+    p {
+        color:white;
+    }
+}
+
+@media all (max-width: 480px){
+    body{
+        background: darkred;
+    }
 }
 
