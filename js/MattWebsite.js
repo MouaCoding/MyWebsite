@@ -38,6 +38,41 @@ function getYear() {
 }
 
 
+function redrawCanvas() {
+    var htmlCanvas = document.getElementById("canvas");
+    var context = htmlCanvas.getContext('2d');
+    initCanvas();
+
+    function initCanvas() {
+        window.addEventListener('resize', resizeCanvas, false);
+        resizeCanvas();
+    }
+    function redraw() {
+        context.strokeStyle = 'blue';
+        context.lineWidth = '5';
+        context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
+    }
+    function resizeCanvas() {
+        htmlCanvas.width = window.innerWidth;
+        htmlCanvas.height = window.innerHeight;
+        redraw();
+    }
+
+}
+
+var backgroundCount = 2;
+function change_image() {
+    if (backgroundCount == 8) {
+        backgroundCount = 1;
+    }
+
+    var img = "/img/backgroundImages/" + "b" + backgroundCount + '.jpg'
+    document.getElementById("body").src = img;
+    backgroundCount++;
+    setTimeout("change_image()", 5000);
+}
+
+
 //useful array methods: .indexOf - returns -1 if not in else returns index
 //.join .concat
 
@@ -69,3 +104,4 @@ function quiz() {
 
 
 
+change_image();
