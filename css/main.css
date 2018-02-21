@@ -5,27 +5,60 @@
   box-sizing: border-box;
 }
 
+
+nav ul.top-bar {
+    background: linear-gradient(to top, grey 0%, black 60%);
+    text-align: center;
+    margin-right: 40px;
+    padding: 40px;
+    width: 100%;
+    list-style-type: none;
+    border-radius:10px;
+    transition: all .5s;
+}
+nav ul.top-bar li{
+    display: inline;
+    padding-right: 50px;
+}
+nav ul.top-bar a:link,
+nav ul.top-bar a:visited{
+    color:white;
+    text-decoration:none;
+}
+nav ul.top-bar a:hover{
+    color:firebrick;
+}
+
+
 body {
     background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('../img/mountain.jpg');
     background-size: cover;
     background-position: center;
+    background:black url('../img/water-drop.jpg');
 }
+
+
+/*--------------------------------------------------Header-----------------------------------------------------------*/
 
 header {
     padding: 10px;
 }
 
 header #title {
-    color: peachpuff;
-    padding: 20px;
+    color: white;
+    padding: 0;
     background: transparent;
     border: white;
     border-radius: 10px;
     text-shadow: 5px 8px 5px black;
     text-align:center;
-    font-size: 65px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin: 500px;
+    width:auto;
+
 }
 
 h1, h2 {
@@ -45,13 +78,6 @@ ul {
     color: black;
 }
 
-#aboutme{
-    background: radial-gradient(circle, black, white);
-    border: 5px solid black;
-    border-radius: 10px;
-    color: darkslategrey;
-    padding: 50px;
-}
 
 #links{
 }
@@ -63,6 +89,9 @@ ul {
 
 ul#horizontalImages{
     list-style-type: none;
+    text-align:center; 
+    padding-bottom:50px;  
+    padding-top:0; 
 }
 
 ul#horizontalImages li{
@@ -75,18 +104,19 @@ ul#horizontalImages li:hover{
     transform: scale(2.0);
 }
 
-ul#horizontalImages li#linkedin{
-    background: url('../img/linkedin.jpg');
-    background-size: 50px;
-    border: 5px solid black;
-}
-ul#horizontalImages li#github{
-    background: url('../img/github.jpg');
-}
-ul#horizontalImages li#mail{
-    background: url('../img/mail.jpg');
+.h1Title{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-decoration: underline;
+    letter-spacing:2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 0px 5px black;
+    text-transform:uppercase;
 }
 
+/*--------------------------------------------------About Me-----------------------------------------------------------*/
 
 
 .profile-pic{
@@ -101,13 +131,91 @@ ul#horizontalImages li#mail{
     transform: scale(2.0) rotate(360deg);
 }
 
-
 .picture{
     text-align: center;
+    margin-bottom:50px;
 }
 
+
+#aboutme{
+    background: radial-gradient(circle, transparent 10%, white 80%);
+    border-radius: 10px;
+    color: darkslategrey;
+    padding: 80px;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 50px;
+    color: black;
+}
+
+.aboutmecolumn {
+    width: 300px;
+    height: 300px;
+    display:inline-block;
+    margin: 0 10%;
+    text-align:center;
+}
+div#aboutmebuttons p{
+    font-size: 14px;
+    border: none;
+    position:absolute;
+    width:300px;
+    height:auto;
+}
+.splitintwo{
+    width:100%;
+    text-align:center;
+    margin:0;
+}
+
+div#aboutmebuttons img{
+    margin-right:auto;
+    background: url(../img/profile.jpg) center no-repeat;
+    background-size:cover;
+    transition:all .5s;
+   
+}
+div#aboutmebuttons img:hover {
+    transform: scale(1.5) ;
+}
+div#aboutme button#efficient {
+}
+
+.aboutMeHexagons {
+    background: lightblue;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+
+/*--------------------------------------------------Skills-----------------------------------------------------------*/
+#skills {
+    background: radial-gradient(circle, transparent 10%, white 80%);
+    border-radius: 10px;
+    color: darkslategrey;
+    padding: 80px;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 50px;
+    color: lightcoral;
+}
+
+/*
+div#skills h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-decoration: underline;
+    letter-spacing:2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    text-shadow: 5px 0px 5px black;
+    text-transform:uppercase;
+}
+    */
+
+
+
 .project-box {
-    background: radial-gradient( transparent 50%, white 100%); /*url('../img/images.jpg') no-repeat center;*/
+    background: radial-gradient(circle, transparent 10%, white 100%); /*url('../img/images.jpg') no-repeat center;*/
     border-radius: 10px;
     padding: 20px 50px 200px 50px;
     margin: 100px 0px;
@@ -120,7 +228,6 @@ ul#horizontalImages li#mail{
 }
 
 ul#project-inline li{
-    /*display: inline;*/
     width: 45.6%;
     list-style-type: none;
     margin: 30px 0px;  
@@ -153,31 +260,29 @@ ul li#sustainable {
     transform: translate(2,0);
 }
 
-/*unclicked links are orange*/
+/*unclicked links are orange
 a:link {
     color: orange;
     
 }
 
-/*After a link is clicked, becomes light blue*/
 a:visited {
     color: lightblue;
 }
 
-/*on hover over link, becomes forest green*/
 a:hover {
     color: forestgreen;
-}
+}   
 
-/*while clicking, becomes light coral*/
 a:active {
     color: lightcoral;
 }
+    */
 
 /*when tabbed change font to black and bkgrnd color to orange*/
 :focus {
     color: black;
-    background-color: orange;
+    background-color: gold;
 }
 
 

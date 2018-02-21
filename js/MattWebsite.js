@@ -1,4 +1,5 @@
 ﻿
+
 function add(x, y)
 {
     return x + y;
@@ -30,6 +31,41 @@ function githubConfirm() {
         return false;
     }
 }
+
+function getYear() {
+    var year = new Date().getFullYear();
+    return year;
+}
+
+
+//useful array methods: .indexOf - returns -1 if not in else returns index
+//.join .concat
+
+//for (var value in objectName){console.log(value, ": ", objectName[value]} Prints out the whole object and their values
+
+function quiz() {
+    var a;
+    var correctAnswers=0;
+    var questions = [
+        {
+            question: "What is 1?",
+            answer: "1"
+        },
+        {
+            question: "What is 2?",
+            answer: "2" 
+        }
+    ];
+    for (i = 0; i < questions.length; i++) {
+        a = prompt(questions[i].question);
+        if (a === questions[i].answer)
+            correctAnswers++;
+    }
+    document.write("You've got " + correctAnswers + " answer(s) right!");
+}
+//quiz();
+
+
 
 
 
