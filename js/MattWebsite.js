@@ -32,9 +32,9 @@ function githubConfirm() {
     }
 }
 
-function getYear() {
+function getYear(id) {
     var year = new Date().getFullYear();
-    return year;
+    document.getElementById(id).innerHTML = Date();
 }
 
 
@@ -60,17 +60,6 @@ function redrawCanvas() {
 
 }
 
-var backgroundCount = 2;
-function change_image() {
-    if (backgroundCount == 8) {
-        backgroundCount = 1;
-    }
-
-    var img = "img/" + "b" + backgroundCount + '.jpg'
-    document.getElementById("body").src = img;
-    backgroundCount++;
-    setTimeout("change_image()", 1000);
-}
 
 
 //useful array methods: .indexOf - returns -1 if not in else returns index
@@ -101,7 +90,26 @@ function quiz() {
 //quiz();
 
 
+//Clicking ------------------------------------------------
+
+var title = document.getElementById("aboutme");
+title.addEventListener("click", function() { alert("HI"); });
 
 
 
-change_image();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
