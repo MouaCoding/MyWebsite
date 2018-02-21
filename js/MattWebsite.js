@@ -66,10 +66,10 @@ function change_image() {
         backgroundCount = 1;
     }
 
-    var img = "/img/backgroundImages/" + "b" + backgroundCount + '.jpg'
+    var img = "img/" + "b" + backgroundCount + '.jpg'
     document.getElementById("body").src = img;
     backgroundCount++;
-    setTimeout("change_image()", 5000);
+    setTimeout("change_image()", 1000);
 }
 
 
