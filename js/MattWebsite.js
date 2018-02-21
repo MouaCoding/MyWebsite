@@ -17,6 +17,8 @@ function substitute() {
     myTitle.innerHTML = myValue;
 }
 
+
+
 function linkedinConfirm() {
     if (confirm('Do you want to go to Matthew\'s LinkedIn?')) {
         window.location = 'https://www.linkedin.com/in/matthew-moua-545090122/';
@@ -90,10 +92,6 @@ function quiz() {
 //quiz();
 
 
-//Clicking ------------------------------------------------
-
-var title = document.getElementById("aboutme");
-title.addEventListener("click", function() { alert("HI"); });
 
 
 
