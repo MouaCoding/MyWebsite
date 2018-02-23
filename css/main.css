@@ -149,7 +149,7 @@ ul#horizontalImages li:hover{
 
 
 #aboutme{
-    background: radial-gradient(circle, transparent 10%, white 80%);
+    background: radial-gradient(circle, transparent 10%, black 80%);
     border-radius: 10px;
     color: darkslategrey;
     padding: 80px;
@@ -168,7 +168,6 @@ ul#horizontalImages li:hover{
 div#aboutmebuttons p{
     font-size: 14px;
     border: none;
-    position:absolute;
     width:300px;
     height:auto;
 }
@@ -188,7 +187,7 @@ div#aboutmebuttons img{
 div#aboutmebuttons img:hover {
     transform: scale(1.5) ;
 }
-div#aboutme button#efficient {
+div#aboutmebuttons img#efficient {
 }
 
 .aboutMeHexagons {
@@ -199,14 +198,44 @@ div#aboutme button#efficient {
 
 
 /*--------------------------------------------------Skills-----------------------------------------------------------*/
-#skills {
-    background: radial-gradient(circle, transparent 10%, white 80%);
+#skillGroup {
+    background: radial-gradient(circle, transparent 10%, black 80%);
     border-radius: 10px;
     color: darkslategrey;
     padding: 80px;
     box-shadow: 10px 10px 10px black;
     margin-top: 50px;
     color: lightcoral;
+}
+
+.container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills{
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+    border-radius:0 5px 5px 0;
+    margin-bottom:20px;
+}
+.js {width: 30%; background-color: #f44336;} /* Red */
+.css {width: 30%; background-color: #2196F3;} /* Blue */
+.html {width: 30%; background-color: #4CAF50;} /* Green */
+.jquery {width: 30%; background-color: orange;} /* Orange */
+.android {width: 30%; background-color: mediumvioletred;} /* violet */
+.python {width: 30%; background-color: #7Fd100;} /* light green */
+.c {width: 30%; background-color: lightsalmon;} /* salmon */
+.r {width: 30%; background-color: lightseagreen;} /* sea green */
+.firebase {width: 30%; background-color: #8000F0;} /* purple */
+
+.animate-skills {
+    -webkit-transition: width 4.50s ease !important;
+    -moz-transition: width 4.50s ease !important;
+    -o-transition: width 4.50s ease !important;
+    transition: width 6s ease !important;
 }
 
 /*
@@ -224,6 +253,22 @@ div#skills h1 {
     */
 
 
+/*-----------------------------------------PROJECTS--------------------------------------------------*/
+
+div#project-title-list div{
+    font-size:1.5em;
+    display:inline;
+    margin:0 5%;
+}
+
+div#project-title-list div:hover {
+    background:red;
+    transition:width 6s ease !important;
+
+}
+
+div#project-title-list div#web-projects:hover{
+}
 
 .project-box {
     background: radial-gradient(circle, transparent 10%, white 100%); /*url('../img/images.jpg') no-repeat center;*/
@@ -267,7 +312,6 @@ ul li#sustainable {
 }
 
 .projects:hover {
-    background: lightblue;
     transform: translate(2,0);
 }
 

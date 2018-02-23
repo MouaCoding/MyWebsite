@@ -1,5 +1,6 @@
 ﻿
 
+
 function add(x, y)
 {
     return x + y;
@@ -40,27 +41,6 @@ function getYear(id) {
 }
 
 
-function redrawCanvas() {
-    var htmlCanvas = document.getElementById("canvas");
-    var context = htmlCanvas.getContext('2d');
-    initCanvas();
-
-    function initCanvas() {
-        window.addEventListener('resize', resizeCanvas, false);
-        resizeCanvas();
-    }
-    function redraw() {
-        context.strokeStyle = 'blue';
-        context.lineWidth = '5';
-        context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
-    }
-    function resizeCanvas() {
-        htmlCanvas.width = window.innerWidth;
-        htmlCanvas.height = window.innerHeight;
-        redraw();
-    }
-
-}
 
 
 
@@ -69,31 +49,49 @@ function redrawCanvas() {
 
 //for (var value in objectName){console.log(value, ": ", objectName[value]} Prints out the whole object and their values
 
-function quiz() {
-    var a;
-    var correctAnswers=0;
-    var questions = [
-        {
-            question: "What is 1?",
-            answer: "1"
-        },
-        {
-            question: "What is 2?",
-            answer: "2" 
-        }
-    ];
-    for (i = 0; i < questions.length; i++) {
-        a = prompt(questions[i].question);
-        if (a === questions[i].answer)
-            correctAnswers++;
+
+
+//Jquery calls
+
+/*
+//Hide skills content until image is clicked
+$('#efficientContent').hide();
+$('#efficient').hover(function () {
+    $('#efficientContent').fadeIn(1000);
+});
+$('#hardContent').hide();
+$('#hardworker').hover(function () {
+    $('#hardContent').fadeIn(1000);
+});
+
+$('#reliableContent').hide();
+$('#reliable').hover(function () {
+    $('#reliableContent').fadeIn(1000);
+});
+
+$('#responsiveContent').hide();
+$('#responsive').hover(function () {
+    $('#responsiveContent').fadeIn(1000);
+});
+*/
+
+//Animate skills
+$(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 2600) {
+        $('#skillGroup').ready(function () {
+            $('.js').css('width', '75%');
+            $('.css').css('width', '65%');
+            $('.html').css('width', '80%');
+            $('.jquery').css('width', '75%');
+            $('.android').css('width', '90%');
+            $('.python').css('width', '75%');
+            $('.c').css('width', '55%');
+            $('.r').css('width', '70%');
+            $('.firebase').css('width', '90%')
+        });
     }
-    document.write("You've got " + correctAnswers + " answer(s) right!");
-}
-//quiz();
-
-
-
-
+});
 
 
 

@@ -4,7 +4,6 @@
     <title>Matthew Moua</title>
     
     <meta name="viewport" content="width=device-width" />
-    <script src="js/MattWebsite.js"> </script>
 
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -15,9 +14,9 @@
 <body>
     
     <nav>
-        <ul class="top-bar">
+        <ul class="top-bar" id="top-bar">
             <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#skillGroup">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#codingTutorials">Coding Tutorials</a></li>
             <li><a href="#miscellanous">Miscellanous</a></li>
@@ -57,22 +56,22 @@
             <div class="splitintwo">
                 <div class="aboutmecolumn">
                     <img id="efficient" class="aboutMeHexagons">
-                    <p>Fast<br />I am constantly improving load times with lag-free UI and more efficient databases and queries.</p>
+                    <p id="efficientContent">Fast<br />I am constantly improving load times with lag-free UI and more efficient databases and queries.</p>
                 </div>
                 <div class="aboutmecolumn">
                     <img id="hardworker" class="aboutMeHexagons">
-                    <p>Hard Worker<br />I won't stop coding until I solve the problem.</p>
+                    <p id="hardContent">Hard Worker<br />I won't stop coding until I solve the problem.</p>
                 </div>
             </div>
 
             <div class="splitintwo">
                 <div class="aboutmecolumn">
                     <img id="reliable" class="aboutMeHexagons">
-                    <p>Reliable<br />I finish my work in a timely manner and will look for future improvements.</p>
+                    <p id="reliableContent">Reliable<br />I finish my work in a timely manner and will look for future improvements.</p>
                 </div>
                 <div class="aboutmecolumn">
                     <img id="responsive" class="aboutMeHexagons">
-                    <p>Responsive<br />My designs are responsive and dynamic and will expand to any size and per user interaction.</p>
+                    <p id="responsiveContent">Responsive<br />My designs are responsive and dynamic and will expand to any size and per user interaction.</p>
                 </div>
             </div>
         </div>
@@ -80,24 +79,89 @@
 
 
 
-    <div id="skills">
+    <div id="skillGroup">
         <h1 class="h1Title">Skills</h1>
-            <ul id="skillsList">
-                <li>Javascript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>Android Studio (Java, XML)</li>                
-                <li>Python</li>
-                <li>C, C++</li>
-                <li>R Studio</li>
-                <li>Firebase</li>
+            <div class="container">
+                <div class="skills js animate-skills"><div style="float:left; display:inline;background:firebrick; padding:0 20px;">Javascript</div> 75%</div>
+            </div>
+            <div class="container">
+                <div class="skills css animate-skills">
+                    <div style="float:left; display:inline; background:#4149E1; padding:0 20px;">
+                        CSS
+                    </div>
+                    65%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills html animate-skills">
+                    <div style="float:left; display:inline; background:forestgreen; padding:0 20px;">
+                        HTML
+                    </div>
+                    80%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills jquery animate-skills">
+                    <div style="float:left; display:inline; background:#FF8000; padding:0 20px;">
+                        JQuery
+                    </div>
+                    75%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills android animate-skills">
+                    <div style="float:left; display:inline; background:blueviolet; padding:0 20px;">
+                        Java (Android)
+                    </div>
+                    90%
+                </div>
+                </div>                
+            <div class="container">
+                <div class="skills python animate-skills">
+                    <div style="float:left; display:inline; background:green; padding:0 20px;">
+                        Python
+                    </div>
+                    75%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills c animate-skills">
+                    <div style="float:left; display:inline; background:lightcoral; padding:0 20px;">
+                        C++
+                    </div>
+                    55%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills r animate-skills">
+                    <div style="float:left; display:inline; background: #7b98fe; padding:0 20px;">
+                        R Studio
+                    </div>
+                    70%
+                </div>
+                </div>
+            <div class="container">
+                <div class="skills firebase animate-skills">
+                    <div style="float:left; display:inline; background:purple; padding:0 20px;">
+                        Firebase
+                    </div>
+                    90%
+                </div>
+                </div>
                 
-            </ul>
         </div>
     
     <div class="project-box group" id="projects">
         <nav class="projects">
             <h1 class="h1Title">Projects</h1>
+            <div style="text-align:center;">
+            <div id="project-title-list" >
+                <div id="all-projects">ALL</div>
+                <div id="web-projects">WEB</div>
+                <div id="android-projects">ANDROID</div>
+                <div id="other-projects">OTHER</div>
+                </div>
+            </div>
             <ul id="project-inline">
                 <li id="rhrn"><a href="rhrn.html"> Right Here Right Now</a></li>
                 <li id="sustainable"><a href="sustainable.html"> Sustainable Energy Conservation</a></li>
@@ -119,9 +183,11 @@
             <a href="https://www.linkedin.com/in/matthew-moua-545090122/"> LinkedIn</a>
         </p>
 
-        <script src="js/OnClick.js"></script>
+    <script src="js/OnClick.js"></script>
+    <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/MattWebsite.js"> </script>
         <footer>
-            &copy; Matthew Moua <a href="#title">Back to Top</a>
+            &copy; Matthew Moua <a href="#top-bar">Back to Top</a>
         </footer>
 </body>
 
